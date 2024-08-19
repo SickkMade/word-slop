@@ -65,7 +65,10 @@ function checkResult(textContent){
     if(textContent === correct){
         alert('win')
         localStorage.setItem('current', ++current)
-        if(current > maxScore) localStorage.setItem('max', current)
+        if(current > maxScore){
+            localStorage.setItem('max', current)
+            maxScore = current
+        } 
     }
     else if(textContent !== 'abc'){
         alert('lose')
