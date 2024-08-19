@@ -73,6 +73,7 @@ function checkResult(textContent){
     else if(textContent !== 'abc'){
         alert('lose')
         localStorage.setItem('current', 0)
+        current = 0
     }
 
     score.textContent = current
